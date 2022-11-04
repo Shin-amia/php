@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Lab 8</title>
+	<META http-equiv="Set-Cookie" content="user=Мережников Даниил Андреевич 121090;">
+</head>
+<body>
+	<!--#if expr='v("HTTP_COOKIE")=~/user/' -->
+	<p>Вы снова зашли на сайт студента "<?php echo $_COOKIE["user"]; ?></p>
+	<!--#if expr='v("HTTP_COOKIE")=~/user_type/' -->
+	<p>Статус : <?php echo $_COOKIE["user_type"]; ?></p>
+	<!--#endif -->
+	<!--#else -->
+	<p>Я вас не знаю</p>
+	<!--#endif -->
+	<a href="reg.shtml">Форма Регистрации</a>
+	<form action="clear.shtml">
+		<input type="submit" value="Очистить куки"/>
+	</form>
+</body>
+</html>

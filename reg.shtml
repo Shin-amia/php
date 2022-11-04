@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>REg Info</title>
+	<META http-equiv="Set-Cookie" content="user_type=<?php echo $_GET['user_type']; ?>">
+</head>
+<body>
+	<p>Ваш статус после регистрации : "<?php echo $_GET['user_type']; ?></p>
+	<!--#if expr='v("HTTP_COOKIE")=~/user_type/' -->
+	<p>Ваш статус из куки : "<?php echo $_COOKIE["user_type"]; ?></p>
+	<!--#endif -->
+	<a href="index.shtml">На главную</a>
+</body>
+</html>
